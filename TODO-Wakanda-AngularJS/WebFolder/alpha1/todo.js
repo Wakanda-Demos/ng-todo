@@ -5,9 +5,9 @@ var Item;
 angular.module('todo', ['wakConnectorModule'])
 
 function Todo($scope, wakConnectorService) {
-  wakConnectorService.init('Item').then(
+  wakConnectorService.init('Item').then(function () {
     TodoReady($scope, wakConnectorService);
-  );
+  });
 }
 
 function TodoReady($scope, $wakanda) {
